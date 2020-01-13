@@ -4,7 +4,8 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'DevBook',
+  port: '4001',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -18,7 +19,15 @@ module.exports = {
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    [
+      'style', {}, `a[title="站长统计"]{display:none}`
+    ],
+    ['script', 
+      {
+        src: 'https://s9.cnzz.com/z_stat.php?id=1278571619&web_id=1278571619'
+      }
+    ]
   ],
 
   /**
@@ -42,8 +51,12 @@ module.exports = {
         link: '/config/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Blog',
+        link: 'https://pangxieju.com'
+      },
+      {
+        text: 'Github',
+        link: 'https://github.com/pangxieju'
       }
     ],
     sidebar: {
